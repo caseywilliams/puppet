@@ -6,7 +6,7 @@
 # Raketasks and such to set the version based on the output of `git describe`
 
 module Puppet
-  PUPPETVERSION = '5.3.3'
+  PUPPETVERSION = '6.0.0' # [mergeup testing: version from master]
 
   ##
   # version is a public API method intended to always provide a fast and
@@ -59,7 +59,7 @@ module Puppet
   #
   # @return [String] containing the puppet version, e.g. "3.0.1"
   def self.version
-    version_file = File.join(File.dirname(__FILE__), 'VERSION')
+    version_file = File.join(File.dirname(__FILE__), 'VERSION') # [mergeup testing: additional edit from master branch]
     return @puppet_version if @puppet_version
     if version = read_version_file(version_file)
       @puppet_version = version
