@@ -13,7 +13,7 @@
 
 Gem::Specification.new do |s|
   s.name = "puppet"
-  version = "5.3.3"
+  version = "5.3.4 [mergeup testing: version from 5.3.x]"
   mdata = version.match(/(\d+\.\d+\.\d+)/)
   s.version = mdata ? mdata[1] : version
 
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubyforge_project = "puppet"
   s.summary = "Puppet, an automated configuration management tool"
-  s.specification_version = 3
+  s.specification_version = 3 # [mergeup testing: addition from 5.3.x]
   s.add_runtime_dependency(%q<facter>, [">= 2.0.1", "< 4"])
   s.add_runtime_dependency(%q<hiera>, [">= 3.2.1", "< 4"])
   # PUP-7115 - return to a gem dependency in Puppet 5
